@@ -10,6 +10,28 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    
+    @IBOutlet weak var avaImage: UIImageView!
+    
+    @IBOutlet weak var usernameTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var repeatPassword: UITextField!
+    
+    
+    @IBOutlet weak var fullnameTxt: UITextField!
+    @IBOutlet weak var bioTxt: UITextField!
+    @IBOutlet weak var webTxt: UITextField!
+    
+    @IBOutlet weak var signInBtn: UIButton!
+    @IBOutlet weak var cancelBtn: UIButton!
+    
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    var scrollViewHeight : CGFloat = 0
+    
+    var keyboard = CGRect()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +42,15 @@ class SignUpViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func signUpBtn_click(_ sender: UIButton) {
+        print("sign up pressed")
+    }
+    
+    @IBAction func cancelBtn_click(_ sender: UIButton) {
+        print("cancel pressed")
+    }
+    
     
 
     /*
