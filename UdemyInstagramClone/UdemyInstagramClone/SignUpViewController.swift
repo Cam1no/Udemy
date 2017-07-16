@@ -35,9 +35,12 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // scrollview関連初期値
+        // scrollviewサイズ指定
         scrollView.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        // scrollviewが動くように
         scrollView.contentSize.height = self.view.frame.height
+        
+        // 初期状態の高さを保存-!
         scrollViewHeight = scrollView.frame.size.height
         
         // キーボードが動いた時に動作するメソッド
@@ -84,9 +87,6 @@ class SignUpViewController: UIViewController {
         })
         
     }
-    
-    
-    let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
     
     
     
