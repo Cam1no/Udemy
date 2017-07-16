@@ -12,9 +12,12 @@
 		5BEB7FBB1F1B79FA00EB6AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FB91F1B79FA00EB6AEB /* Main.storyboard */; };
 		5BEB7FBD1F1B79FA00EB6AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FBC1F1B79FA00EB6AEB /* Assets.xcassets */; };
 		5BEB7FC01F1B79FA00EB6AEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FBE1F1B79FA00EB6AEB /* LaunchScreen.storyboard */; };
+		5BEB7FC81F1B7ADE00EB6AEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FC71F1B7ADE00EB6AEB /* GoogleService-Info.plist */; };
+		C30ED785DA89886C49B7E5EB /* Pods_UdemyInstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD924C56B230D1A03CB255C5 /* Pods_UdemyInstagramClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00066F424413252EF22D9E6D /* Pods-UdemyInstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyInstagramClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-UdemyInstagramClone/Pods-UdemyInstagramClone.release.xcconfig"; sourceTree = "<group>"; };
 		5BEB7FB21F1B79FA00EB6AEB /* UdemyInstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemyInstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEB7FB51F1B79FA00EB6AEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BEB7FB71F1B79FA00EB6AEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		5BEB7FBC1F1B79FA00EB6AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BEB7FBF1F1B79FA00EB6AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BEB7FC11F1B79FA00EB6AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BEB7FC71F1B7ADE00EB6AEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADF51A345C962B352F051EFC /* Pods-UdemyInstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyInstagramClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UdemyInstagramClone/Pods-UdemyInstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
+		CD924C56B230D1A03CB255C5 /* Pods_UdemyInstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UdemyInstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30ED785DA89886C49B7E5EB /* Pods_UdemyInstagramClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				5BEB7FB41F1B79FA00EB6AEB /* UdemyInstagramClone */,
 				5BEB7FB31F1B79FA00EB6AEB /* Products */,
+				962C6149C40E73622F218AFC /* Pods */,
+				FAFD9BF5B90AC9CD127C0849 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,26 @@
 				5BEB7FBC1F1B79FA00EB6AEB /* Assets.xcassets */,
 				5BEB7FBE1F1B79FA00EB6AEB /* LaunchScreen.storyboard */,
 				5BEB7FC11F1B79FA00EB6AEB /* Info.plist */,
+				5BEB7FC71F1B7ADE00EB6AEB /* GoogleService-Info.plist */,
 			);
 			path = UdemyInstagramClone;
+			sourceTree = "<group>";
+		};
+		962C6149C40E73622F218AFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADF51A345C962B352F051EFC /* Pods-UdemyInstagramClone.debug.xcconfig */,
+				00066F424413252EF22D9E6D /* Pods-UdemyInstagramClone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAFD9BF5B90AC9CD127C0849 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD924C56B230D1A03CB255C5 /* Pods_UdemyInstagramClone.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BEB7FC41F1B79FA00EB6AEB /* Build configuration list for PBXNativeTarget "UdemyInstagramClone" */;
 			buildPhases = (
+				8810EBF7A36D7F734DA8B513 /* [CP] Check Pods Manifest.lock */,
 				5BEB7FAE1F1B79FA00EB6AEB /* Sources */,
 				5BEB7FAF1F1B79FA00EB6AEB /* Frameworks */,
 				5BEB7FB01F1B79FA00EB6AEB /* Resources */,
+				888DA4989717CC2B4C6AD683 /* [CP] Embed Pods Frameworks */,
+				2E86C4207D797730BA4344C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BEB7FC01F1B79FA00EB6AEB /* LaunchScreen.storyboard in Resources */,
+				5BEB7FC81F1B7ADE00EB6AEB /* GoogleService-Info.plist in Resources */,
 				5BEB7FBD1F1B79FA00EB6AEB /* Assets.xcassets in Resources */,
 				5BEB7FBB1F1B79FA00EB6AEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E86C4207D797730BA4344C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UdemyInstagramClone/Pods-UdemyInstagramClone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8810EBF7A36D7F734DA8B513 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		888DA4989717CC2B4C6AD683 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UdemyInstagramClone/Pods-UdemyInstagramClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BEB7FAE1F1B79FA00EB6AEB /* Sources */ = {
@@ -258,6 +337,7 @@
 		};
 		5BEB7FC51F1B79FA00EB6AEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADF51A345C962B352F051EFC /* Pods-UdemyInstagramClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UdemyInstagramClone/Info.plist;
@@ -270,6 +350,7 @@
 		};
 		5BEB7FC61F1B79FA00EB6AEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00066F424413252EF22D9E6D /* Pods-UdemyInstagramClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UdemyInstagramClone/Info.plist;
@@ -299,6 +380,7 @@
 				5BEB7FC61F1B79FA00EB6AEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
