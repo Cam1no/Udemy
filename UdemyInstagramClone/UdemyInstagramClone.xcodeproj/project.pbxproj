@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5BEB7FB61F1B79FA00EB6AEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB7FB51F1B79FA00EB6AEB /* AppDelegate.swift */; };
-		5BEB7FB81F1B79FA00EB6AEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB7FB71F1B79FA00EB6AEB /* ViewController.swift */; };
 		5BEB7FBB1F1B79FA00EB6AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FB91F1B79FA00EB6AEB /* Main.storyboard */; };
 		5BEB7FBD1F1B79FA00EB6AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FBC1F1B79FA00EB6AEB /* Assets.xcassets */; };
 		5BEB7FC01F1B79FA00EB6AEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FBE1F1B79FA00EB6AEB /* LaunchScreen.storyboard */; };
 		5BEB7FC81F1B7ADE00EB6AEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FC71F1B7ADE00EB6AEB /* GoogleService-Info.plist */; };
+		5BEB7FCA1F1B7D3500EB6AEB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB7FC91F1B7D3500EB6AEB /* SignInViewController.swift */; };
+		5BEB7FCD1F1B7D5E00EB6AEB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB7FCC1F1B7D5E00EB6AEB /* SignUpViewController.swift */; };
+		5BEB7FCF1F1B7DC700EB6AEB /* RestPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB7FCE1F1B7DC700EB6AEB /* RestPasswordViewController.swift */; };
 		C30ED785DA89886C49B7E5EB /* Pods_UdemyInstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD924C56B230D1A03CB255C5 /* Pods_UdemyInstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +22,14 @@
 		00066F424413252EF22D9E6D /* Pods-UdemyInstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyInstagramClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-UdemyInstagramClone/Pods-UdemyInstagramClone.release.xcconfig"; sourceTree = "<group>"; };
 		5BEB7FB21F1B79FA00EB6AEB /* UdemyInstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemyInstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEB7FB51F1B79FA00EB6AEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5BEB7FB71F1B79FA00EB6AEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5BEB7FBA1F1B79FA00EB6AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BEB7FBC1F1B79FA00EB6AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BEB7FBF1F1B79FA00EB6AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BEB7FC11F1B79FA00EB6AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BEB7FC71F1B7ADE00EB6AEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5BEB7FC91F1B7D3500EB6AEB /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		5BEB7FCC1F1B7D5E00EB6AEB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5BEB7FCE1F1B7DC700EB6AEB /* RestPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestPasswordViewController.swift; sourceTree = "<group>"; };
 		ADF51A345C962B352F051EFC /* Pods-UdemyInstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyInstagramClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UdemyInstagramClone/Pods-UdemyInstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
 		CD924C56B230D1A03CB255C5 /* Pods_UdemyInstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UdemyInstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,8 +67,8 @@
 		5BEB7FB41F1B79FA00EB6AEB /* UdemyInstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				5BEB7FCB1F1B7D3D00EB6AEB /* Controllers */,
 				5BEB7FB51F1B79FA00EB6AEB /* AppDelegate.swift */,
-				5BEB7FB71F1B79FA00EB6AEB /* ViewController.swift */,
 				5BEB7FB91F1B79FA00EB6AEB /* Main.storyboard */,
 				5BEB7FBC1F1B79FA00EB6AEB /* Assets.xcassets */,
 				5BEB7FBE1F1B79FA00EB6AEB /* LaunchScreen.storyboard */,
@@ -72,6 +76,16 @@
 				5BEB7FC71F1B7ADE00EB6AEB /* GoogleService-Info.plist */,
 			);
 			path = UdemyInstagramClone;
+			sourceTree = "<group>";
+		};
+		5BEB7FCB1F1B7D3D00EB6AEB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BEB7FC91F1B7D3500EB6AEB /* SignInViewController.swift */,
+				5BEB7FCC1F1B7D5E00EB6AEB /* SignUpViewController.swift */,
+				5BEB7FCE1F1B7DC700EB6AEB /* RestPasswordViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		962C6149C40E73622F218AFC /* Pods */ = {
@@ -215,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BEB7FB81F1B79FA00EB6AEB /* ViewController.swift in Sources */,
+				5BEB7FCD1F1B7D5E00EB6AEB /* SignUpViewController.swift in Sources */,
+				5BEB7FCA1F1B7D3500EB6AEB /* SignInViewController.swift in Sources */,
+				5BEB7FCF1F1B7DC700EB6AEB /* RestPasswordViewController.swift in Sources */,
 				5BEB7FB61F1B79FA00EB6AEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
