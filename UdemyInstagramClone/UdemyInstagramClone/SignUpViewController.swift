@@ -34,8 +34,66 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // scrollview関連初期値
+        scrollView.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        scrollView.contentSize.height = self.view.frame.height
+        scrollViewHeight = scrollView.frame.size.height
+        
+        // キーボードが動いた時に動作するメソッド
+        let notificationCenter = NotificationCenter.default
+        
+        notificationCenter.addObserver(self, selector: #selector(showKeyboard), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        notificationCenter.addObserver(self, selector: #selector(hideKeyboard), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        //tapされた時の動作を宣言する: 一度タップされたらキーボードを隠す
+        let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
+        hideTap.numberOfTapsRequired = 1
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(hideTap)
+        
+    }
+    
+    // キーボード以外をタップするとキーボードが下がるメソッド
+    func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
+        self.view.endEditing(true)
+    }
+    
+    
+    // show keyboard
+    func showKeyboard(notification: Notification){
+        
+        keyboard = ((notification.userInfo?[UIKeyboardFrameEndUserInfoKey]! as AnyObject).cgRectValue)!
+        
 
-        // Do any additional setup after loading the view.
+        UIView.animate(withDuration: 0.4, animations: {
+            self.scrollView.frame.size.height = self.scrollViewHeight - self.keyboard.height
+        })
+        
+    }
+    
+    // hide keyboard
+    func hideKeyboard(notification: Notification){
+        
+        keyboard = ((notification.userInfo?[UIKeyboardFrameEndUserInfoKey]! as AnyObject).cgRectValue)!
+        
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            self.scrollView.frame.size.height = self.view.frame.height
+        })
+        
+    }
+    
+    
+    let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
+    
+    
+    
+    
+    
+    func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
+        return CGRect(x: x, y: y, width: width, height: height)
     }
 
     override func didReceiveMemoryWarning() {
