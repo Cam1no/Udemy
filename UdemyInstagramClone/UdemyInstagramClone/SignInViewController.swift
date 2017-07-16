@@ -42,4 +42,12 @@ class SignInViewController: UIViewController {
     }
     */
 
+    
+    @IBAction func signInBtn_clicked(_ sender: UIButton) {
+    }
+    @IBAction func signUpBtn_clicked(_ sender: UIButton) {
+    }
+    @IBAction func forgotBtn_clicked(_ sender: UIButton) {
+    }
+    
 }

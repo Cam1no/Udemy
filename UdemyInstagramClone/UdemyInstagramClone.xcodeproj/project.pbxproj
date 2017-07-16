@@ -140,6 +140,7 @@
 				TargetAttributes = {
 					5BEB7FB11F1B79FA00EB6AEB = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = MGHH4PP8LQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -356,10 +357,13 @@
 			baseConfigurationReference = ADF51A345C962B352F051EFC /* Pods-UdemyInstagramClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MGHH4PP8LQ;
 				INFOPLIST_FILE = UdemyInstagramClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Yuji.UdemyInstagramClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -369,10 +373,13 @@
 			baseConfigurationReference = 00066F424413252EF22D9E6D /* Pods-UdemyInstagramClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MGHH4PP8LQ;
 				INFOPLIST_FILE = UdemyInstagramClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Yuji.UdemyInstagramClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
