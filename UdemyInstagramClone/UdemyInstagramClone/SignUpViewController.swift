@@ -8,11 +8,14 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+import FirebaseStorage
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
   // Firebaseインスタンス変数
   var DBRef:DatabaseReference!
+  
   
   @IBOutlet weak var avaImg: UIImageView!
     
@@ -82,6 +85,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     // インスタンスを初期化
     DBRef = Database.database().reference()
+    
     
   }
   
@@ -181,10 +185,24 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
       
     }
     
+    // 画像のupload
+    let storage = Storage.storage()
+    let storageRef = storage.reference()
+    
+    if let data = UIImagePNGRepresentation(avaImg.image! ) {
+      let reference = storageRef.child("images/" + "1" + ".jpg")
+      reference.putData(data, metadata: nil, completion: { metaData, error in
+        print(metaData as Any)
+        print(error as Any)
+      })
+      dismiss(animated: true, completion: nil)
+    }
+    
     let data = ["usename": usernameTxt.text!,
                 "email": emailTxt.text!,
                 "password": passwordTxt.text!,
-                "fullname": fullnameTxt.text!
+                "fullname": fullnameTxt.text!,
+                "avaImgPath": storageRef.fullPath
                ]
     
     DBRef.child("users").childByAutoId().setValue(data)

@@ -3,4 +3,5 @@ target 'UdemyInstagramClone' do
   use_frameworks!
   pod 'Firebase/Database'
   pod 'Firebase/Core'
+  pod 'Firebase/Storage'
 end
