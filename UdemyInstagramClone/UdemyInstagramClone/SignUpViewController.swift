@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
   
   @IBOutlet weak var avaImage: UIImageView!
     
@@ -56,6 +56,15 @@ class SignUpViewController: UIViewController {
     self.view.isUserInteractionEnabled = true
     self.view.addGestureRecognizer(hideTap)
     
+    
+    // TextFieldDelegete
+    usernameTxt.delegate = self
+    passwordTxt.delegate = self
+    repeatPassword.delegate = self
+    fullnameTxt.delegate = self
+    bioTxt.delegate = self
+    webTxt.delegate = self
+    
   }
   
   // キーボード以外をタップするとキーボードが下がるメソッド
@@ -85,6 +94,20 @@ class SignUpViewController: UIViewController {
     UIView.animate(withDuration: 0.4, animations: {
         self.scrollView.frame.size.height = self.view.frame.height
     })
+    
+  }
+  
+  
+  // textFieldデリゲートメソッド
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    
+    usernameTxt.resignFirstResponder()
+    passwordTxt.resignFirstResponder()
+    repeatPassword.resignFirstResponder()
+    fullnameTxt.resignFirstResponder()
+    bioTxt.resignFirstResponder()
+    webTxt.resignFirstResponder()
+    return true
     
   }
   
