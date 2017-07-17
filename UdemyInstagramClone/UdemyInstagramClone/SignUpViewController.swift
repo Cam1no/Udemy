@@ -70,6 +70,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     avaTap.numberOfTapsRequired = 1
     avaImg.isUserInteractionEnabled = true
     avaImg.addGestureRecognizer(avaTap)
+    
+    // 画像を丸める
+    avaImg.layer.cornerRadius = avaImg.frame.size.width/2
+    avaImg.clipsToBounds = true
+    
   }
   
   func loadImg(recognizer : UITapGestureRecognizer) {
