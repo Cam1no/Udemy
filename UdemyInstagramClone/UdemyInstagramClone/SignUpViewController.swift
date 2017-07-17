@@ -15,9 +15,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
   @IBOutlet weak var usernameTxt: UITextField!
   @IBOutlet weak var passwordTxt: UITextField!
   @IBOutlet weak var repeatPassword: UITextField!
-  
+  @IBOutlet weak var emailTxt: UITextField!
   
   @IBOutlet weak var fullnameTxt: UITextField!
+  
   @IBOutlet weak var bioTxt: UITextField!
   @IBOutlet weak var webTxt: UITextField!
 
@@ -151,7 +152,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
   }
   
   @IBAction func signUpBtn_click(_ sender: UIButton) {
-    print("sign up pressed")
+    // keyboardを閉じる
+    self.view.endEditing(true)
+    
+    if (usernameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || repeatPassword.text!.isEmpty || fullnameTxt.text!.isEmpty ){
+      
+      let alert = UIAlertController(title: "PLEASE", message: "fill all fields", preferredStyle: UIAlertControllerStyle.alert)
+      let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+      alert.addAction(ok)
+      self.present(alert, animated: true, completion: nil)
+      
+    }
   }
   
   // 前に戻る
