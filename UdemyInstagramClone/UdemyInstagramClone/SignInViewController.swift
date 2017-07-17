@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate {
     
   // TextField
   @IBOutlet weak var usernameTxt: UITextField!
@@ -22,13 +22,24 @@ class SignInViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    // Do any additional setup after loading the view.
+    
+    // textFieldの情報を受け取るためのdelegeteを設定
+    usernameTxt.delegate = self
+    passwordTxt.delegate = self
+    
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  
+  // キーボードを閉じる
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    usernameTxt.resignFirstResponder()
+    passwordTxt.resignFirstResponder()
+    return true
   }
   
 
