@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  
+  // Firebaseインスタンス変数
+  var DBRef:DatabaseReference!
   
   @IBOutlet weak var avaImg: UIImageView!
     
@@ -75,6 +79,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     // 画像を丸める
     avaImg.layer.cornerRadius = avaImg.frame.size.width/2
     avaImg.clipsToBounds = true
+    
+    // インスタンスを初期化
+    DBRef = Database.database().reference()
     
   }
   
@@ -173,6 +180,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
       self.present(alert, animated: true, completion: nil)
       
     }
+    
+    let data = ["usename": usernameTxt.text!,
+                "email": emailTxt.text!,
+                "password": passwordTxt.text!,
+                "fullname": fullnameTxt.text!
+               ]
+    
+    DBRef.child("user/01").setValue(data)
+    
   }
   
   // 前に戻る
