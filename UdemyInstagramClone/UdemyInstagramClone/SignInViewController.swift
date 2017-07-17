@@ -27,6 +27,17 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     usernameTxt.delegate = self
     passwordTxt.delegate = self
     
+    //tapされた時の動作を宣言する: 一度タップされたらキーボードを隠す
+    let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
+    hideTap.numberOfTapsRequired = 1
+    self.view.isUserInteractionEnabled = true
+    self.view.addGestureRecognizer(hideTap)
+    
+  }
+  
+  // キーボード以外をタップするとキーボードが下がるメソッド
+  func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
+    self.view.endEditing(true)
   }
 
   override func didReceiveMemoryWarning() {
