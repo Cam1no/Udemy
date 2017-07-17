@@ -163,6 +163,16 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
       self.present(alert, animated: true, completion: nil)
       
     }
+    
+    if passwordTxt.text != repeatPassword.text {
+      
+      let alert = UIAlertController(title: "PASSWORD", message: "Is not match", preferredStyle: UIAlertControllerStyle.alert)
+      
+      let ok = UIAlertAction(title: "ok", style: UIAlertActionStyle.cancel, handler: nil)
+      alert.addAction(ok)
+      self.present(alert, animated: true, completion: nil)
+      
+    }
   }
   
   // 前に戻る
