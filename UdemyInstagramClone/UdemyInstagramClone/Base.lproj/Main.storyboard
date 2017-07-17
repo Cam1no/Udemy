@@ -92,8 +92,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pp" id="0yO-gY-fXZ">
-                                        <rect key="frame" x="147" y="73" width="80" height="80"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pp" id="0yO-gY-fXZ">
+                                        <rect key="frame" x="147" y="72" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" id="ipk-cc-f9D">
@@ -168,7 +168,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="avaImage" destination="0yO-gY-fXZ" id="uMu-YG-Lss"/>
+                        <outlet property="avaImg" destination="0yO-gY-fXZ" id="4zs-mR-glD"/>
                         <outlet property="bioTxt" destination="3CS-cD-X2b" id="s5h-Sr-fE6"/>
                         <outlet property="cancelBtn" destination="fBP-Vf-8Lb" id="AeV-Mv-hlP"/>
                         <outlet property="fullnameTxt" destination="fW9-r5-aOv" id="AjO-Xg-ajx"/>

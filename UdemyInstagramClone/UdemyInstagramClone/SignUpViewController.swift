@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UITextFieldDelegate {
+class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-  @IBOutlet weak var avaImage: UIImageView!
+  @IBOutlet weak var avaImg: UIImageView!
     
   @IBOutlet weak var usernameTxt: UITextField!
   @IBOutlet weak var passwordTxt: UITextField!
@@ -65,6 +65,27 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     bioTxt.delegate = self
     webTxt.delegate = self
     
+    // tapした時にimage libraryを開く
+    let avaTap = UITapGestureRecognizer(target: self, action: #selector(loadImg))
+    avaTap.numberOfTapsRequired = 1
+    avaImg.isUserInteractionEnabled = true
+    avaImg.addGestureRecognizer(avaTap)
+  }
+  
+  func loadImg(recognizer : UITapGestureRecognizer) {
+    
+    let picker = UIImagePickerController()
+    picker.delegate = self
+    picker.sourceType = .photoLibrary
+    picker.allowsEditing = true
+    // swift3でpresentViewControllerから変わった
+    present(picker, animated: true, completion: nil)
+    
+  }
+  
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    avaImg.image = info[UIImagePickerControllerEditedImage] as? UIImage
+    self.dismiss(animated: true, completion: nil)
   }
   
   // キーボード以外をタップするとキーボードが下がるメソッド
@@ -128,6 +149,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     print("sign up pressed")
   }
   
+  // 前に戻る
   @IBAction func cancelBtn_click(_ sender: UIButton) {
     self.dismiss(animated: true, completion: nil)
       
