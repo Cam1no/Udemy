@@ -187,7 +187,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
                 "fullname": fullnameTxt.text!
                ]
     
-    DBRef.child("user/01").setValue(data)
+    DBRef.child("users").childByAutoId().setValue(data)
+
     
   }
   
