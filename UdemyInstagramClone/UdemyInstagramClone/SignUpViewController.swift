@@ -87,6 +87,23 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     DBRef = Database.database().reference()
     
     
+    // layout
+    avaImg.frame = CGRect(x: self.view.frame.size.width / 2 - 40, y: 40, width: 80, height: 80)
+    usernameTxt.frame = CGRect(x: 10, y: self.avaImg.frame.origin.y + 90, width: self.view.frame.size.width - 20, height: 30)
+    passwordTxt.frame = CGRect(x: 10, y: self.usernameTxt.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 30)
+    repeatPassword.frame = CGRect(x: 10, y: passwordTxt.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 30)
+    emailTxt.frame = CGRect(x: 10, y: repeatPassword.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 60)
+    fullnameTxt.frame = CGRect(x: 10, y: emailTxt.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 30)
+    bioTxt.frame = CGRect(x: 10, y: fullnameTxt.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 30)
+    webTxt.frame = CGRect(x: 10, y: bioTxt.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 30)
+    signInBtn.frame = CGRect(x: 20, y: webTxt.frame.origin.y + 30, width: self.view.frame.size.width / 4, height: 30)
+    cancelBtn.frame = CGRect(x: self.view.frame.size.width - self.view.frame.size.width / 4 - 20, y: signInBtn.frame.origin.y, width: self.view.frame.width / 4, height: 30)
+    
+    
+    
+    
+    
+    
   }
   
   func loadImg(recognizer : UITapGestureRecognizer) {
