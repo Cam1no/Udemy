@@ -66,6 +66,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
   
   @IBAction func signInBtn_clicked(_ sender: UIButton) {
+    self.view.endEditing(true)
+    
+    
   }
   @IBAction func signUpBtn_clicked(_ sender: UIButton) {
   }
