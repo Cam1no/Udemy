@@ -66,11 +66,19 @@
                                     <action selector="signInBtn_clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xD1-D3-jwd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Od-DF-FjB">
+                                <rect key="frame" x="16" y="70" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="forgotBtn" destination="1pz-qP-ls0" id="Fia-qV-rJi"/>
+                        <outlet property="label" destination="2Od-DF-FjB" id="UlL-FT-IcY"/>
                         <outlet property="passwordTxt" destination="hc9-kn-zmq" id="fDQ-wK-0Z7"/>
                         <outlet property="signInBtn" destination="bpM-Wh-V82" id="AFH-Ma-kPh"/>
                         <outlet property="signUpBtn" destination="ACs-me-aBf" id="Ewx-CX-ol0"/>

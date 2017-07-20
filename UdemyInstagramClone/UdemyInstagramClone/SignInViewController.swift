@@ -9,7 +9,8 @@
 import UIKit
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
-    
+  
+  @IBOutlet weak var label: UILabel!
   // TextField
   @IBOutlet weak var usernameTxt: UITextField!
   @IBOutlet weak var passwordTxt: UITextField!
@@ -32,6 +33,15 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     hideTap.numberOfTapsRequired = 1
     self.view.isUserInteractionEnabled = true
     self.view.addGestureRecognizer(hideTap)
+    
+    
+    // layout
+    label.frame = CGRect(x: 10, y: 80, width: self.view.frame.size.width - 20, height: 50)
+    usernameTxt.frame = CGRect(x: 10, y: label.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 30)
+    passwordTxt.frame = CGRect(x: 10, y: usernameTxt.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 30)
+    forgotBtn.frame = CGRect(x: 10, y: passwordTxt.frame.origin.y + 30, width: self.view.frame.size.width / 4, height: 30)
+    signInBtn.frame = CGRect(x: 20, y: forgotBtn.frame.origin.y + 40, width: self.view.frame.width / 4, height: 30)
+    signUpBtn.frame = CGRect(x: self.view.frame.width - self.view.frame.size.width / 4 - 20, y: signInBtn.frame.origin.y, width: self.view.frame.size.width / 4, height: 30)
     
   }
   
