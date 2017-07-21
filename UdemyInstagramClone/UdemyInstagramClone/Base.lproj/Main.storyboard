@@ -216,8 +216,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Do you wanna change new password ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N0B-KD-Tt2">
-                                <rect key="frame" x="39" y="97" width="296" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Do you wanna change new password ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N0B-KD-Tt2">
+                                <rect key="frame" x="16" y="97" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -253,6 +253,7 @@
                     <connections>
                         <outlet property="cancelBtn" destination="FVn-g8-Hj4" id="Ui2-Vs-zhZ"/>
                         <outlet property="emailTxt" destination="CIn-lP-C3V" id="gfX-NP-1CD"/>
+                        <outlet property="label" destination="N0B-KD-Tt2" id="pUA-2h-fwH"/>
                         <outlet property="resetBtn" destination="Ssa-WI-kac" id="TaJ-2J-SPU"/>
                     </connections>
                 </viewController>

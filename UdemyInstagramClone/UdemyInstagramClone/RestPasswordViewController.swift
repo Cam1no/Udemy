@@ -10,6 +10,7 @@ import UIKit
 
 class RestPasswordViewController: UIViewController {
 
+  @IBOutlet weak var label: UILabel!
   
   @IBOutlet weak var emailTxt: UITextField!
   
@@ -19,13 +20,27 @@ class RestPasswordViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    //tapされた時の動作を宣言する: 一度タップされたらキーボードを隠す
+    let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
+    hideTap.numberOfTapsRequired = 1
+    self.view.isUserInteractionEnabled = true
+    self.view.addGestureRecognizer(hideTap)
 
-    // Do any additional setup after loading the view.
+    label.frame = CGRect(x: 10, y: 80, width: self.view.frame.size.width - 20, height: 40)
+    emailTxt.frame = CGRect(x: 10, y: label.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 40)
+    resetBtn.frame = CGRect(x: 10, y: emailTxt.frame.origin.y + 40, width: self.view.frame.size.width / 4, height: 40)
+    cancelBtn.frame = CGRect(x: self.view.frame.size.width * ( 3 / 4 ) - 20 , y: resetBtn.frame.origin.y, width: self.view.frame.size.width / 4, height: 40)
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+
+  }
+  
+  // キーボード以外をタップするとキーボードが下がるメソッド
+  func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
+    self.view.endEditing(true)
   }
   
 
