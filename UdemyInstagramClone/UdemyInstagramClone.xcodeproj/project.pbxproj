@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B493B7E1F28EC4000C831D9 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B493B7D1F28EC4000C831D9 /* HomeCollectionViewController.swift */; };
 		5BEB7FB61F1B79FA00EB6AEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB7FB51F1B79FA00EB6AEB /* AppDelegate.swift */; };
 		5BEB7FBB1F1B79FA00EB6AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FB91F1B79FA00EB6AEB /* Main.storyboard */; };
 		5BEB7FBD1F1B79FA00EB6AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB7FBC1F1B79FA00EB6AEB /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		00066F424413252EF22D9E6D /* Pods-UdemyInstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyInstagramClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-UdemyInstagramClone/Pods-UdemyInstagramClone.release.xcconfig"; sourceTree = "<group>"; };
+		5B493B7D1F28EC4000C831D9 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		5BEB7FB21F1B79FA00EB6AEB /* UdemyInstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemyInstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEB7FB51F1B79FA00EB6AEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BEB7FBA1F1B79FA00EB6AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				5BEB7FC91F1B7D3500EB6AEB /* SignInViewController.swift */,
 				5BEB7FCC1F1B7D5E00EB6AEB /* SignUpViewController.swift */,
 				5BEB7FCE1F1B7DC700EB6AEB /* RestPasswordViewController.swift */,
+				5B493B7D1F28EC4000C831D9 /* HomeCollectionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				5BEB7FCD1F1B7D5E00EB6AEB /* SignUpViewController.swift in Sources */,
 				5BEB7FCA1F1B7D3500EB6AEB /* SignInViewController.swift in Sources */,
 				5BEB7FCF1F1B7DC700EB6AEB /* RestPasswordViewController.swift in Sources */,
+				5B493B7E1F28EC4000C831D9 /* HomeCollectionViewController.swift in Sources */,
 				5BEB7FB61F1B79FA00EB6AEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
