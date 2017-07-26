@@ -100,6 +100,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     cancelBtn.frame = CGRect(x: self.view.frame.size.width - self.view.frame.size.width / 4 - 20, y: signInBtn.frame.origin.y, width: self.view.frame.width / 4, height: 30)
     
     
+    // back image
+    let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+    bg.image = UIImage(named: "bk.jpeg")
+    bg.layer.zPosition = -1
+    self.view.addSubview(bg)
     
     
     

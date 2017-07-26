@@ -43,6 +43,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     signInBtn.frame = CGRect(x: 20, y: forgotBtn.frame.origin.y + 40, width: self.view.frame.width / 4, height: 30)
     signUpBtn.frame = CGRect(x: self.view.frame.width - self.view.frame.size.width / 4 - 20, y: signInBtn.frame.origin.y, width: self.view.frame.size.width / 4, height: 30)
     
+    
+    // back image
+    let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+    bg.image = UIImage(named: "bk.jpeg")
+    bg.layer.zPosition = -1
+    self.view.addSubview(bg)
+      
+    
   }
   
   // キーボード以外をタップするとキーボードが下がるメソッド

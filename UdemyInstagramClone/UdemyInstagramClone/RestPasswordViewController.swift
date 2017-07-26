@@ -31,6 +31,12 @@ class RestPasswordViewController: UIViewController {
     emailTxt.frame = CGRect(x: 10, y: label.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 40)
     resetBtn.frame = CGRect(x: 10, y: emailTxt.frame.origin.y + 40, width: self.view.frame.size.width / 4, height: 40)
     cancelBtn.frame = CGRect(x: self.view.frame.size.width * ( 3 / 4 ) - 20 , y: resetBtn.frame.origin.y, width: self.view.frame.size.width / 4, height: 40)
+    
+    // back image
+    let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+    bg.image = UIImage(named: "bk.jpeg")
+    bg.layer.zPosition = -1
+    self.view.addSubview(bg)
   }
 
   override func didReceiveMemoryWarning() {
