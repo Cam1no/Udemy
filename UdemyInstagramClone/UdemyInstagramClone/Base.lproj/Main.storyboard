@@ -284,22 +284,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eyq-zs-Pra">
-                            <size key="itemSize" width="120" height="120"/>
+                            <size key="itemSize" width="106" height="106"/>
                             <size key="headerReferenceSize" width="50" height="230"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="ef8-tV-NIx">
-                                <rect key="frame" x="0.0" y="230" width="120" height="120"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="Cell" id="ef8-tV-NIx" customClass="HomeCollectionViewCell" customModule="UdemyInstagramClone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="230" width="106" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="vRb-Ed-orP">
+                                            <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <connections>
+                                    <outlet property="picImg" destination="vRb-Ed-orP" id="m8w-UD-c88"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="Nsj-pe-ZeA">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="Header" id="Nsj-pe-ZeA" customClass="HeaderCollectionReusableView" customModule="UdemyInstagramClone" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -308,7 +317,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yuji Kinjo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gOU-A3-JR9">
-                                    <rect key="frame" x="20" y="116" width="347" height="21"/>
+                                    <rect key="frame" x="20" y="117" width="347" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -364,7 +373,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="followings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k8l-0r-EGP">
-                                    <rect key="frame" x="298" y="44" width="53" height="21"/>
+                                    <rect key="frame" x="298" y="42" width="53" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <nil key="textColor"/>
@@ -380,6 +389,19 @@
                                     </state>
                                 </button>
                             </subviews>
+                            <connections>
+                                <outlet property="avaImg" destination="4jA-fm-q37" id="kMb-z8-jEo"/>
+                                <outlet property="bioLbl" destination="YIX-0Q-gpv" id="uo1-Oi-UqP"/>
+                                <outlet property="button" destination="LPz-lz-ukn" id="xVZ-Vg-DAD"/>
+                                <outlet property="followerTitle" destination="bjb-E6-3wp" id="j0c-3o-yby"/>
+                                <outlet property="followers" destination="NTL-Rj-9cn" id="N17-zg-wIc"/>
+                                <outlet property="followingTitle" destination="k8l-0r-EGP" id="2Ko-lK-ehJ"/>
+                                <outlet property="followings" destination="wn4-OR-M8R" id="Kbx-Fy-RqL"/>
+                                <outlet property="fullname" destination="gOU-A3-JR9" id="QGg-zS-YDS"/>
+                                <outlet property="postTitle" destination="4aj-4a-mIb" id="tLa-u8-or2"/>
+                                <outlet property="posts" destination="1fS-AT-mhz" id="IWx-cN-HI7"/>
+                                <outlet property="webTxt" destination="GAW-xm-0cV" id="LSl-Ry-r0Q"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="Hgh-zP-JPj" id="zXA-nk-GmL"/>
